@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">popular-movies-stage2</string>
     <string name="movie_poster">Movie Poster</string>
     <!-- Error messages-->
@@ -26,5 +27,6 @@
     <string name="trailer_label">Trailer :</string>
     <string name="review_label">Review :</string>
     <string name="no_review">No reviews</string>
+    <string name="unable_to_play_trailer">"No Web Browser or application to play YouTube video url."</string>
 
 </resources>

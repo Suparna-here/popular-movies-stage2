@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
     private MovieDBAdapter mMovieDBAdapter;
     private MainActivityViewModel mViewModel;
     private static final String SORT_KEY = "Ordering_Sequence";
-    private static final String VISIBLE_POSITION="Visible_Position";
     private String sort_by;
 
     private TextView mErrorMessageDisplay;
@@ -86,7 +84,6 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
 
         }else{
             sort_by=savedInstanceState.getString(SORT_KEY);
-            mPosition=savedInstanceState.getInt(VISIBLE_POSITION);
         }
         if(ServiceGenerator.LOCAL_LOGD)
         Log.d(LOG_TAG, "su: sort By "+sort_by);
@@ -97,8 +94,6 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         outState.putString(SORT_KEY, sort_by);
-        mPosition = ((LinearLayoutManager)mRecyclerView.getLayoutManager()).findFirstCompletelyVisibleItemPosition();
-        outState.putInt(VISIBLE_POSITION, mPosition);
         super.onSaveInstanceState(outState);
     }
 
@@ -179,7 +174,6 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
         bundle.putParcelableArrayList(DetailActivity.EXTRA_DATA, movieList );
         Intent intent = new Intent(this, DetailActivity.class);
         intent.putExtra(DetailActivity.EXTRA_BUNDLE, bundle);
-//        intent.putParcelableArrayListExtra(DetailActivity.EXTRA_DATA, movieList);
         startActivity(intent);
     }
 

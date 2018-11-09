@@ -64,7 +64,6 @@ public class DetailActivity extends AppCompatActivity implements TrailerDBAdapte
         }
         Bundle bundle = intent.getBundleExtra(DetailActivity.EXTRA_BUNDLE);
         ArrayList<Movie> movieArrayList = bundle.getParcelableArrayList(EXTRA_DATA);
-//        ArrayList<Movie> movieArrayList = intent.getParcelableArrayListExtra(EXTRA_DATA);
         final Movie movie = movieArrayList.get(0);
         if (movieArrayList == null) {
             // EXTRA_DATA not found in intent
@@ -158,9 +157,7 @@ public class DetailActivity extends AppCompatActivity implements TrailerDBAdapte
          * The TrailerDBAdapter is responsible for linking trailer data with the Views that
          * will end up displaying our trailer data.
          */
-        mTrailerDBAdapter = new
-
-                TrailerDBAdapter(this);
+        mTrailerDBAdapter = new TrailerDBAdapter(this);
 
         /* Setting the adapter attaches it to the RecyclerView in our layout. */
         mTrailerRecyclerView.setAdapter(mTrailerDBAdapter);
@@ -343,10 +340,14 @@ public class DetailActivity extends AppCompatActivity implements TrailerDBAdapte
         Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + trailer.getKey()));
         Intent webIntent = new Intent(Intent.ACTION_VIEW,
                 Uri.parse("http://www.youtube.com/watch?v=" + trailer.getKey()));
+
+        String errorMessage=getResources().getString(R.string.unable_to_play_trailer);
         try {
             startActivity(appIntent);
         } catch (ActivityNotFoundException ex) {
+            if(webIntent.resolveActivity(getPackageManager()) != null)
             startActivity(webIntent);
+            else Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
         }
     }
 }
