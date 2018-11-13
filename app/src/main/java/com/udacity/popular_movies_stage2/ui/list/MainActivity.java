@@ -25,7 +25,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements MovieDBAdapter.MovieDBAdapterOnClickHandler {
-    private int mPosition = RecyclerView.NO_POSITION;
     private RecyclerView mRecyclerView;
     private MovieDBAdapter mMovieDBAdapter;
     private MainActivityViewModel mViewModel;
@@ -110,8 +109,6 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
                 if (movieList != null && movieList.size() != 0) {
                     if(ServiceGenerator.LOCAL_LOGD)
                     Log.d(LOG_TAG, "mRecyclerView mPosition");
-                    if (mPosition == RecyclerView.NO_POSITION) mPosition = 0;
-                    mRecyclerView.smoothScrollToPosition(mPosition);
                     showMovieDataView();
                 } else {
                     if(ServiceGenerator.LOCAL_LOGD)
