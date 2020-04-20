@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
     private TextView mErrorMessageDisplay;
     private TextView mMovieFavouriteErrorMessageDisplay;
 
-    private static final int SPAN_COUNT = 2;
+//    private static final int SPAN_COUNT = 2;
     public static final String LOG_TAG = MainActivity.class.getSimpleName();
 
     @Override
@@ -48,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements MovieDBAdapter.Mo
         mErrorMessageDisplay = (TextView) findViewById(R.id.tv_movie_error_message_display);
 
         mMovieFavouriteErrorMessageDisplay = (TextView) findViewById(R.id.tv_movie_favourite_error_message_display);
+        final int SPAN_COUNT = getResources().getInteger(R.integer.gallery_columns);
 
         /*
          * GridLayoutManager for GridView.

@@ -191,6 +191,7 @@ public class DetailActivity extends AppCompatActivity implements TrailerDBAdapte
     //** Populate UI with Movie details *//
     private void populateUI(Movie movie) {
         String posteUrl = ServiceGenerator.POSTER_URL + movie.getPoster_path();
+
         Picasso.get()
                 .load(posteUrl)
                 .placeholder(R.mipmap.ic_launcher)
