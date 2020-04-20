@@ -49,19 +49,19 @@ You will build a fully featured application that looks and feels natural on the 
 
 ## Tablet
 ### Movie Listing
-<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Phone/MovieListing.png" width="40%" />
+<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Tablet/MovieListing.png" width="40%" />
 
 ### Movie In Detail
-<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Phone/MovieInDetail.png" width="40%" />
+<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Tablet/MovieInDetail.png" width="40%" />
 
 ### Mark Favorite Movie
-<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Phone/MarkFavoriteMovie.png" width="40%" />
+<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Tablet/MarkFavoriteMovie.png" width="40%" />
 
 ### Menu for choosing sort order
-<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Phone/SortOnFromMenu.png" width="40%" />
+<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Tablet/SortOnFromMenu.png" width="40%" />
 
 ### Show Favorite Movies
-<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Phone/FavoriteMovieListing.png" width="40%" />
+<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Tablet/FavoriteMovieListing.png" width="40%" />
 
 ### Favorite Movie In Detail
-<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Phone/FavoriteMovieInDetail.png" width="40%" />
+<img src="https://github.com/Suparna-here/popular-movies-stage2/blob/master/ScreenShots/Tablet/FavoriteMovieInDetail.png" width="40%" />
